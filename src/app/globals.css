@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Light mode defaults */
+  :root {
+    --color-bg: #FAFAF9;
+    --color-bg-secondary: #F5F5F4;
+    --color-text: #1C1917;
+    --color-text-secondary: #57534E;
+    --color-text-tertiary: #A8A29E;
+    --color-border: #E7E5E4;
+    --color-accent: #F97316;
+    --color-accent-soft: #FFF7ED;
+    --color-surface: #FFFFFF;
+    --color-surface-hover: #F5F5F4;
+  }
+
+  /* Dark mode overrides */
+  .dark {
+    --color-bg: #0C0A09;
+    --color-bg-secondary: #1C1917;
+    --color-text: #FAFAF9;
+    --color-text-secondary: #A8A29E;
+    --color-text-tertiary: #57534E;
+    --color-border: #292524;
+    --color-accent: #FB923C;
+    --color-accent-soft: #1F1410;
+    --color-surface: #1C1917;
+    --color-surface-hover: #292524;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Selection color */
+  ::selection {
+    background-color: #FDBA74;
+    color: #1C1917;
+  }
+
+  .dark ::selection {
+    background-color: #9A3412;
+    color: #FAFAF9;
+  }
+}
+
+@layer components {
+  /* Sunset gradient accent */
+  .sunset-gradient {
+    background: linear-gradient(135deg, #F97316 0%, #FB923C 50%, #FDBA74 100%);
+  }
+
+  .sunset-gradient-text {
+    background: linear-gradient(135deg, #F97316 0%, #FB923C 50%, #EF4444 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Subtle warm glow effect */
+  .warm-glow {
+    box-shadow: 0 0 80px -20px rgba(249, 115, 22, 0.15);
+  }
+
+  .dark .warm-glow {
+    box-shadow: 0 0 80px -20px rgba(249, 115, 22, 0.08);
+  }
+
+  /* Page container */
+  .page-container {
+    @apply max-w-8xl mx-auto px-6 sm:px-8 lg:px-16;
+  }
+
+  /* Section spacing */
+  .section-spacing {
+    @apply py-24 sm:py-32 lg:py-40;
+  }
+
+  /* Image reveal animation */
+  .image-reveal {
+    clip-path: inset(0 0 0 0);
+    transition: clip-path 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .image-reveal-hidden {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  /* Hover lift effect */
+  .hover-lift {
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+  }
+
+  /* Divider */
+  .divider {
+    @apply h-px w-full;
+    background-color: var(--color-border);
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbar but keep functionality */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Text balance for headings */
+  .text-balance {
+    text-wrap: balance;
+  }
+}
