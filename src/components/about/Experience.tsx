@@ -5,25 +5,32 @@ import SectionHeading from "@/components/ui/SectionHeading";
 
 const experiences = [
   {
-    role: "Senior UX Designer",
+    role: "Senior UX Designer — Behavioral Design Lead",
     company: "Company Name",
     period: "2023 — Present",
     description:
-      "Leading UX design for flagship products. Conducting user research, designing complex workflows, and mentoring junior designers.",
+      "Leading UX design with a behavioral science lens. Applying cognitive psychology principles to product strategy, conducting behavioral research, and mentoring designers on psychology-driven design methods.",
   },
   {
-    role: "UX Designer & Researcher",
+    role: "UX Designer & Behavioral Researcher",
     company: "Company Name",
     period: "2021 — 2023",
     description:
-      "Designed and researched across mobile and web platforms. Led usability testing and translated insights into actionable design improvements.",
+      "Designed across mobile and web platforms using mental model mapping and decision-journey analysis. Introduced behavioral analytics to measure psychological engagement beyond traditional metrics.",
   },
   {
     role: "UI/UX Designer",
     company: "Company Name",
     period: "2019 — 2021",
     description:
-      "Created responsive web designs and mobile app interfaces. Built and maintained a design system used across 5 products.",
+      "Created responsive interfaces grounded in cognitive load theory. Built a design system informed by Gestalt principles and perceptual psychology, used across 5 products.",
+  },
+  {
+    role: "Masters in Clinical Psychology",
+    company: "University",
+    period: "2017 — 2019",
+    description:
+      "Specialized in human cognition, behavioral assessment, and psychometric research. Developed expertise in understanding decision-making patterns, motivation, and emotional regulation — the foundation of my design practice.",
   },
 ];
 

@@ -6,21 +6,21 @@ import AnimatedText from "@/components/ui/AnimatedText";
 const principles = [
   {
     number: "01",
-    title: "Research First",
+    title: "Understand the Mind First",
     description:
-      "Every design decision starts with understanding users. I believe empathy is the foundation of exceptional product design.",
+      "Before opening any design tool, I study the cognitive and emotional context of users. My psychology background ensures every decision is rooted in how people actually think and behave.",
   },
   {
     number: "02",
-    title: "Systems Thinking",
+    title: "Design for Behavior, Not Assumptions",
     description:
-      "I design holistic experiences, not isolated screens. Every element connects to a larger ecosystem of user needs.",
+      "I apply validated psychological frameworks — mental models, cognitive load theory, and decision heuristics — to create interfaces that feel intuitive at a subconscious level.",
   },
   {
     number: "03",
-    title: "Measurable Impact",
+    title: "Measure Behavioral Outcomes",
     description:
-      "Beautiful design means nothing without outcomes. I tie every project to metrics that prove real-world value.",
+      "Success isn't just conversion metrics. I track how user behavior shifts — reduced hesitation, faster decision-making, increased confidence — proving design impact through behavioral data.",
   },
 ];
 
@@ -43,7 +43,7 @@ export default function Philosophy() {
 
             <AnimatedText
               as="h2"
-              text="Design is not just what it looks like. Design is how it works — and why it matters."
+              text="Great design isn't about aesthetics — it's about understanding the psychology behind every interaction."
               className="text-display-sm sm:text-display-md font-display"
             />
 
@@ -54,8 +54,8 @@ export default function Philosophy() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="mt-8 text-body-lg text-neutral-500 dark:text-neutral-400"
             >
-              I approach every project with curiosity, rigor, and a deep respect
-              for the people who will use what I create.
+              My Clinical Psychology training taught me to observe, listen, and decode
+              human behavior — skills I now apply to every product I design.
             </motion.p>
           </div>
 

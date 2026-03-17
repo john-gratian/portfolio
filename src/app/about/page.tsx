@@ -5,8 +5,8 @@ import HomeCTA from "@/components/home/HomeCTA";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About | Portfolio",
-  description: "Learn about my design philosophy, experience, and the tools I use to create exceptional digital experiences.",
+  title: "About | Human Behavior Specialist in UX Design",
+  description: "UX Designer with a Masters in Clinical Psychology — applying behavioral science and cognitive principles to create impactful digital experiences.",
 };
 
 export default function AboutPage() {

@@ -24,7 +24,7 @@ export default function Bio() {
               transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="text-display-md font-display mb-8"
             >
-              I design products that people genuinely enjoy using.
+              A psychologist who designs digital experiences people instinctively understand.
             </motion.h1>
 
             <motion.div
@@ -34,20 +34,24 @@ export default function Bio() {
               className="space-y-5 text-body-lg text-neutral-500 dark:text-neutral-400"
             >
               <p>
-                I&apos;m a UI/UX Designer and Researcher with a passion for creating
-                digital experiences that are both beautiful and deeply functional.
-                My work sits at the intersection of user research, product strategy,
-                and visual design.
+                With a <strong className="text-neutral-700 dark:text-neutral-300">Masters in Clinical Psychology</strong>,
+                I bring a deep understanding of human cognition, emotion, and behavior
+                to every product I design. Where most designers rely on intuition, I apply
+                validated psychological frameworks to make design decisions that genuinely
+                work for people.
               </p>
               <p>
-                Over the past several years, I&apos;ve worked across industries including
-                fintech, healthcare, e-commerce, and enterprise SaaS — delivering 15+
-                products spanning mobile apps, web platforms, and desktop applications.
+                My clinical training taught me to observe without bias, decode behavioral
+                patterns, and understand the &quot;why&quot; behind human actions. I&apos;ve translated
+                these skills into a design practice that spans fintech, healthcare,
+                e-commerce, and enterprise SaaS — delivering 15+ products across mobile,
+                web, and desktop.
               </p>
               <p>
-                I believe the best design comes from deeply understanding the people
-                you&apos;re designing for. Every project begins with research and empathy,
-                then moves through strategy, iteration, and rigorous testing.
+                I don&apos;t just design interfaces — I design for the cognitive processes
+                behind every tap, scroll, and decision. From reducing cognitive load to
+                leveraging motivation theory, my work bridges the gap between behavioral
+                science and product design to create experiences that feel effortless.
               </p>
             </motion.div>
           </div>

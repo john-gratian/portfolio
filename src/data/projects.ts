@@ -36,6 +36,11 @@ export interface Project {
   }[];
   designDecisions?: DesignDecision[];
   userJourney?: JourneyStep[];
+
+  // Behavioral design sections
+  behavioralInsights?: BehavioralInsight[];
+  appliedPsychology?: AppliedPsychologyItem[];
+  behavioralImpact?: BehavioralImpactItem[];
 }
 
 export interface Insight {
@@ -61,6 +66,22 @@ export interface JourneyStep {
   action: string;
   emotion: "positive" | "neutral" | "negative";
   opportunity: string;
+}
+
+export interface BehavioralInsight {
+  pattern: string;
+  observation: string;
+}
+
+export interface AppliedPsychologyItem {
+  principle: string;
+  application: string;
+}
+
+export interface BehavioralImpactItem {
+  behavior: string;
+  before: string;
+  after: string;
 }
 
 // ============================================================
@@ -159,6 +180,21 @@ export const projects: Project[] = [
       { step: "First Transfer", action: "Sends money to a friend", emotion: "positive", opportunity: "Celebrate success" },
       { step: "Check Balance", action: "Views spending overview", emotion: "positive", opportunity: "Visual insights" },
     ],
+    behavioralInsights: [
+      { pattern: "Choice Overload", observation: "Users froze when presented with 20+ features on the dashboard. Behavioral research showed decision paralysis set in after 4-5 visible options." },
+      { pattern: "Loss Aversion", observation: "Users checked their balance 3x more frequently when framed as 'money remaining' vs 'money spent' — they were more motivated to protect what they had." },
+      { pattern: "Status Quo Bias", observation: "68% of users never changed default settings. We redesigned defaults to align with the most common usage patterns identified in research." },
+    ],
+    appliedPsychology: [
+      { principle: "Hick's Law", application: "Reduced the main dashboard from 20+ actions to 4 primary actions, cutting average decision time from 12 seconds to under 3 seconds." },
+      { principle: "Cognitive Load Theory", application: "Introduced progressive disclosure — basic features visible first, advanced tools revealed through natural exploration. Reduced perceived complexity by 64%." },
+      { principle: "Endowment Effect", application: "Personalized the savings dashboard with user's own goals and progress, making users feel ownership and increasing savings feature adoption by 38%." },
+    ],
+    behavioralImpact: [
+      { behavior: "Decision Speed", before: "12s average to choose an action", after: "2.8s — users acted with confidence" },
+      { behavior: "Feature Exploration", before: "Users stuck to 2-3 features", after: "Gradual discovery of 6+ features over 2 weeks" },
+      { behavior: "Financial Anxiety", before: "47% reported stress checking balance", after: "Visual framing reduced stress indicators by 61%" },
+    ],
   },
   {
     slug: "healthwise-platform",
@@ -220,6 +256,21 @@ export const projects: Project[] = [
       "Symptom-based navigation removes the burden of medical knowledge from patients.",
       "Smart scheduling that considers patient context dramatically reduces decision fatigue.",
       "Progressive trust-building elements are essential for telehealth adoption.",
+    ],
+    behavioralInsights: [
+      { pattern: "Anticipatory Anxiety", observation: "Patients experienced anxiety spikes during the booking flow — not from the medical condition, but from the uncertainty of the scheduling process itself." },
+      { pattern: "Authority Bias", observation: "Patients trusted provider recommendations 4x more when accompanied by credentials and patient ratings, leveraging authority and social proof simultaneously." },
+      { pattern: "Ambiguity Aversion", observation: "67% of booking abandonment occurred at specialty selection — users avoided choices when they couldn't understand the options clearly." },
+    ],
+    appliedPsychology: [
+      { principle: "Cognitive Load Theory", application: "Replaced specialty selection with a symptom-first flow using plain language, eliminating the cognitive burden of medical terminology from the patient's decision process." },
+      { principle: "Paradox of Choice", application: "Instead of showing all 50+ available time slots, the smart scheduler presents only 3 optimal options — reducing decision fatigue and increasing booking completion by 39%." },
+      { principle: "Social Proof & Trust", application: "Added progressive trust elements — verified badges, real patient reviews, and provider intro videos — to reduce first-time telehealth anxiety by 52%." },
+    ],
+    behavioralImpact: [
+      { behavior: "Booking Hesitation", before: "45% abandoned mid-booking", after: "94% completion — anxiety-free flow" },
+      { behavior: "Decision Confidence", before: "Users second-guessed specialty choice", after: "Symptom-matching removed guesswork entirely" },
+      { behavior: "Platform Trust", before: "31 NPS — skepticism about virtual care", after: "72 NPS — trust built through behavioral design" },
     ],
   },
   {
@@ -284,6 +335,21 @@ export const projects: Project[] = [
       "Pairing each component with a 'when to use' and 'when not to use' guide prevents misuse.",
       "Regular office hours and design critiques build community around the system.",
     ],
+    behavioralInsights: [
+      { pattern: "Mere Exposure Effect", observation: "Teams that interacted with the design system documentation weekly adopted new components 3x faster than teams who only referenced it during builds." },
+      { pattern: "Functional Fixedness", observation: "Designers were mentally locked into their existing component patterns. Even with better alternatives available, they defaulted to familiar approaches." },
+      { pattern: "Curse of Knowledge", observation: "Senior designers created documentation that assumed too much context — new team members couldn't follow guidelines that experts found 'obvious.'" },
+    ],
+    appliedPsychology: [
+      { principle: "Mental Models", application: "Organized components to match how designers think about UI (by purpose, not by visual appearance), aligning the system with existing cognitive frameworks." },
+      { principle: "Habit Formation (Hook Model)", application: "Created weekly 'design system tips' and office hours that built a regular engagement loop — trigger, action, reward — driving adoption from 23% to 87%." },
+      { principle: "Recognition Over Recall", application: "Replaced text-heavy documentation with visual do/don't examples and live previews, reducing the cognitive effort needed to choose the right component." },
+    ],
+    behavioralImpact: [
+      { behavior: "Component Selection", before: "Designers guessed or searched randomly", after: "Visual-first docs enabled instant recognition" },
+      { behavior: "System Adoption", before: "23% voluntary adoption across teams", after: "87% adoption through behavioral design of the system itself" },
+      { behavior: "Cross-Team Consistency", before: "Each team had its own patterns", after: "Shared mental model unified 12 products" },
+    ],
   },
   {
     slug: "atlas-travel-app",
@@ -346,6 +412,21 @@ export const projects: Project[] = [
       "Reducing choices at the right moment is more valuable than providing more options.",
       "Lottie animations for weather and time transitions make the app feel alive without being heavy.",
     ],
+    behavioralInsights: [
+      { pattern: "Decision Fatigue", observation: "Travelers made 50+ micro-decisions daily. By day 3, cognitive depletion caused them to default to 'whatever is nearby' rather than seeking quality experiences." },
+      { pattern: "Peak-End Rule", observation: "Trip satisfaction correlated most strongly with the best single moment and the final experience — not the average quality of all activities." },
+      { pattern: "Novelty Seeking vs. Safety", observation: "Users craved new experiences but defaulted to familiar choices when overwhelmed. The balance between novelty and comfort was critical." },
+    ],
+    appliedPsychology: [
+      { principle: "Paradox of Choice", application: "Limited daily recommendations to 3-5 curated options instead of endless lists, preventing decision paralysis while maintaining a sense of discovery." },
+      { principle: "Variable Reward Schedules", application: "The 'surprise discovery' feature used variable ratio reinforcement — occasional unexpected gems kept users engaged and exploring rather than following rigid plans." },
+      { principle: "Loss Aversion", application: "Framed time-sensitive recommendations as 'experiences you'll miss' rather than 'things to do' — creating gentle urgency that increased engagement by 34%." },
+    ],
+    behavioralImpact: [
+      { behavior: "Daily Exploration", before: "Users stopped exploring by day 3", after: "Consistent engagement throughout entire trip" },
+      { behavior: "Decision Confidence", before: "Overwhelmed by choices, defaulted to popular", after: "Curated options enabled confident, unique choices" },
+      { behavior: "Trip Satisfaction", before: "Generic experiences, moderate satisfaction", after: "Peak moments designed in, 91% recommendation rate" },
+    ],
   },
   {
     slug: "meridian-dashboard",
@@ -405,6 +486,21 @@ export const projects: Project[] = [
       "Default visualizations should match the question type — bar charts for comparisons, lines for trends.",
       "Shareable insight stories transform analytics from a solo activity to a collaborative one.",
     ],
+    behavioralInsights: [
+      { pattern: "Question-First Mental Model", observation: "Business users think in natural language questions ('Why did revenue drop?'), not in SQL queries or data structures. Their mental model is conversational, not technical." },
+      { pattern: "Visual Superiority Effect", observation: "Users identified trends 5x faster in visual charts than tabular data. The brain processes visual patterns pre-attentively, but the old UI forced conscious, effortful processing." },
+      { pattern: "Learned Helplessness", observation: "After repeated failures with complex query tools, 80% of users stopped trying and became fully dependent on the data team — a classic learned helplessness response." },
+    ],
+    appliedPsychology: [
+      { principle: "Cognitive Load Theory", application: "Replaced SQL-based querying with a natural language input, shifting the cognitive load from the user (recall) to the system (interpretation). Self-service jumped from 20% to 78%." },
+      { principle: "Mental Models", application: "Designed the interface around how business users naturally think about data — questions and stories, not tables and joins — matching the tool to existing cognitive frameworks." },
+      { principle: "Self-Efficacy Theory", application: "Added progressive success moments — easy wins with auto-generated charts — that rebuilt users' confidence in their own data analysis abilities after years of learned helplessness." },
+    ],
+    behavioralImpact: [
+      { behavior: "Data Independence", before: "80% depended on data team for insights", after: "78% create own reports — self-efficacy restored" },
+      { behavior: "Insight Generation", before: "30+ minutes of frustration per query", after: "Under 5 minutes with natural language" },
+      { behavior: "Knowledge Sharing", before: "Insights trapped in individual screens", after: "Story mode enabled collaborative data culture" },
+    ],
   },
   {
     slug: "bloom-ecommerce",
@@ -463,6 +559,21 @@ export const projects: Project[] = [
       "Sustainability storytelling integrated into the shopping flow drives conversion, not just awareness.",
       "Fit recommendation tools directly impact bottom line by reducing returns and increasing purchase confidence.",
       "Editorial-style product layouts justify premium pricing better than grid-only approaches.",
+    ],
+    behavioralInsights: [
+      { pattern: "Narrative Transportation", observation: "Users who engaged with the brand story entered a 'transportation' state — they were 3x more likely to purchase because the narrative reduced critical evaluation of price." },
+      { pattern: "Size Anxiety & Risk Aversion", observation: "68% of cart abandonment was driven by size uncertainty. Users perceived buying without trying as a 'risky bet' — a classic risk aversion response amplified by premium pricing." },
+      { pattern: "Anchoring Effect", observation: "Users who saw the sustainability cost breakdown first (materials, fair wages) perceived the final price as more justified than those who saw price alone." },
+    ],
+    appliedPsychology: [
+      { principle: "Loss Aversion", application: "Introduced 'limited edition' and 'selling fast' signals for genuinely scarce items, leveraging loss aversion to increase urgency without dark patterns." },
+      { principle: "Cognitive Fluency", application: "Redesigned product pages with editorial layouts, generous whitespace, and cinematic photography — making the premium experience feel cognitively 'easy' and congruent with the price point." },
+      { principle: "Social Proof", application: "Added body-type-specific reviews with photos, letting users see clothes on similar builds. This reduced size anxiety by 55% and return rates by the same margin." },
+    ],
+    behavioralImpact: [
+      { behavior: "Purchase Confidence", before: "85% cart abandonment from uncertainty", after: "Fit recommendations cut abandonment by 41%" },
+      { behavior: "Price Perception", before: "Users felt price was unjustified", after: "Sustainability narrative reframed value perception" },
+      { behavior: "Brand Connection", before: "8% found the brand story", after: "Story woven throughout — 3x purchase likelihood" },
     ],
   },
 ];

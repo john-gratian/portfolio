@@ -5,25 +5,36 @@ import SectionHeading from "@/components/ui/SectionHeading";
 
 const skillCategories = [
   {
-    title: "Research & Strategy",
+    title: "Behavioral Science & Psychology",
     skills: [
-      "User Interviews",
+      "Cognitive Bias Analysis",
+      "Behavioral Research Methods",
+      "Mental Model Mapping",
+      "Psychometric Assessment",
+      "Motivation & Persuasion Frameworks",
+      "Emotional Design Principles",
+    ],
+  },
+  {
+    title: "Research & UX Strategy",
+    skills: [
+      "User Interviews & Contextual Inquiry",
       "Usability Testing",
-      "Competitive Analysis",
-      "Journey Mapping",
+      "Decision-Journey Mapping",
       "Information Architecture",
-      "Survey Design",
+      "Choice Architecture Design",
+      "Behavioral Analytics",
     ],
   },
   {
     title: "Design & Prototyping",
     skills: [
-      "Wireframing",
-      "Visual Design",
+      "Wireframing & Visual Design",
       "Interaction Design",
-      "Prototyping",
+      "Prototyping & Validation",
       "Design Systems",
-      "Responsive Design",
+      "Responsive & Accessible Design",
+      "Behavioral Trigger Mapping",
     ],
   },
   {
@@ -31,9 +42,9 @@ const skillCategories = [
     skills: [
       "Figma",
       "Miro",
-      "Principle",
-      "Maze",
-      "Hotjar",
+      "Maze & Hotjar",
+      "Dovetail",
+      "ProtoPie",
       "Storybook",
     ],
   },
@@ -45,10 +56,11 @@ export default function Skills() {
       <div className="page-container">
         <SectionHeading
           label="Capabilities"
-          title="What I bring to the table"
+          title="Psychology meets design"
+          description="A unique skill set that bridges clinical psychology, behavioral science, and user experience design."
         />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
           {skillCategories.map((category, catIndex) => (
             <motion.div
               key={category.title}

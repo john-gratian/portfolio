@@ -12,6 +12,9 @@ import DesignCallout from "@/components/case-study/DesignCallout";
 import UserJourney from "@/components/case-study/UserJourney";
 import ImpactSection from "@/components/case-study/ImpactSection";
 import KeyLearnings from "@/components/case-study/KeyLearnings";
+import BehavioralInsights from "@/components/case-study/BehavioralInsights";
+import AppliedPsychology from "@/components/case-study/AppliedPsychology";
+import BehavioralImpact from "@/components/case-study/BehavioralImpact";
 import NextProject from "@/components/case-study/NextProject";
 import type { Metadata } from "next";
 
@@ -54,11 +57,19 @@ export default function CaseStudyPage({ params }: PageProps) {
       <ProblemStatement problem={project.problem} />
       <ResearchInsights research={project.research} />
 
+      {project.behavioralInsights && project.behavioralInsights.length > 0 && (
+        <BehavioralInsights insights={project.behavioralInsights} />
+      )}
+
       {project.userJourney && project.userJourney.length > 0 && (
         <UserJourney steps={project.userJourney} />
       )}
 
       <DesignStrategy strategy={project.designStrategy} />
+
+      {project.appliedPsychology && project.appliedPsychology.length > 0 && (
+        <AppliedPsychology items={project.appliedPsychology} />
+      )}
 
       <ImageShowcase
         label="Wireframes"
@@ -92,6 +103,11 @@ export default function CaseStudyPage({ params }: PageProps) {
       )}
 
       <ImpactSection metrics={project.impact} accentColor={project.color} />
+
+      {project.behavioralImpact && project.behavioralImpact.length > 0 && (
+        <BehavioralImpact items={project.behavioralImpact} />
+      )}
+
       <KeyLearnings learnings={project.keyLearnings} />
       <NextProject project={nextProject} />
     </PageTransition>

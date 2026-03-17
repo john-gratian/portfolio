@@ -31,7 +31,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-caption uppercase tracking-widest text-sunset-500 mb-6"
           >
-            UI/UX Designer &amp; Researcher
+            Human Behavior Specialist in UX Design
           </motion.p>
 
           {/* Headline */}
@@ -41,9 +41,9 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="text-display-lg font-display mb-8"
           >
-            Crafting digital experiences{" "}
-            <span className="sunset-gradient-text">that people</span>{" "}
-            love to use
+            Designing digital experiences through{" "}
+            <span className="sunset-gradient-text">human behavior</span>{" "}
+            and psychology
           </motion.h1>
 
           {/* Subtext */}
@@ -53,9 +53,9 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="text-body-lg text-neutral-500 dark:text-neutral-400 max-w-2xl mb-10"
           >
-            I design thoughtful, research-driven products that bridge the gap
-            between user needs and business goals. Specializing in complex
-            problem spaces where great UX makes the difference.
+            With a foundation in Clinical Psychology, I apply behavioral science,
+            cognitive principles, and deep user research to design products that
+            align with how people actually think, feel, and make decisions.
           </motion.p>
 
           {/* CTAs */}

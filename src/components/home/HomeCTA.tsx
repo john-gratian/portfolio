@@ -34,7 +34,7 @@ export default function HomeCTA() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-display-md sm:text-display-lg font-display max-w-4xl mx-auto mb-8"
         >
-          Have a project in mind?
+          Ready to design for real human behavior?
         </motion.h2>
 
         <motion.p
@@ -44,8 +44,9 @@ export default function HomeCTA() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-body-lg text-neutral-500 dark:text-neutral-400 max-w-xl mx-auto mb-10"
         >
-          I&apos;m always open to discussing new projects, creative ideas, or
-          opportunities to be part of your vision.
+          I bring a rare combination of psychology and UX design to create
+          impactful digital experiences. Let&apos;s build products that
+          truly understand your users.
         </motion.p>
 
         <motion.div

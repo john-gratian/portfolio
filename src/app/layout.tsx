@@ -18,10 +18,10 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | UI/UX Designer & Researcher",
+  title: "Portfolio | Human Behavior Specialist in UX Design",
   description:
-    "Portfolio of a UI/UX Designer & Researcher specializing in user-centered design, product thinking, and research-driven solutions.",
-  keywords: ["UX Design", "UI Design", "Product Design", "User Research", "Portfolio"],
+    "UX Designer with a Masters in Clinical Psychology — applying behavioral science, cognitive psychology, and research-driven insights to create impactful digital experiences.",
+  keywords: ["UX Design", "Behavioral Design", "Psychology in UX", "Human Behavior", "Cognitive Psychology", "User Research", "Product Design", "Portfolio"],
 };
 
 export default function RootLayout({
